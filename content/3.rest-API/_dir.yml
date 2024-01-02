@@ -1,0 +1,4 @@
+title: 'REST API'
+icon: heroicons-outline:bookmark-alt
+navigation.redirect: /rest-api/about-the-graphql-api
+

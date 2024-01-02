@@ -1,0 +1,27 @@
+.fluid .aside-nav {
+  border-right: 1px solid var(--prose-blockquote-border-color) !important;
+
+}
+
+.fluid .toc {
+  border-left: 1px solid var(--prose-blockquote-border-color) !important;
+}
+
+
+header {
+  border-bottom: 1px solid var(--prose-blockquote-border-color) !important;
+}
+
+footer {
+  border-top: 1px solid var(--prose-blockquote-border-color) !important;
+}
+
+
+hr {
+  border-top: 1px solid var(--prose-blockquote-border-color) !important;
+}
+
+/* To show endpoints expaned in aside menu */
+.docs-aside-tree .recursive {
+  display: block !important;
+}
