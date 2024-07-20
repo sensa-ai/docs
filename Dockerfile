@@ -1,21 +1,23 @@
-FROM node:18-alpine
+FROM node:18.15-alpine
 
-ENV HOST 0.0.0.0
-EXPOSE 4800
-ENV PORT 4800
+# Set the working directory
+WORKDIR /app
 
-COPY . /src
-WORKDIR /src
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
 
-#COPY package*.json ./
-
+# Install dependencies
 RUN npm install
 
-#COPY . .
+# Copy the rest of the application code
+COPY . .
 
+# Build the application
 RUN npm run build
 
-CMD [ "node", "/src/.output/server/index.mjs" ]
+EXPOSE 3001
+
+CMD ["npm", "run", "start"]
 
 
 
