@@ -7,7 +7,7 @@ WORKDIR /src
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --production
+RUN npm install
 
 # Copy the rest of the application
 COPY . .
@@ -15,11 +15,15 @@ COPY . .
 # Build the application
 RUN npm run build
 
+# Debug: List contents of the .output directory
+RUN ls -la /src/.output/server || echo ".output/server directory not found!"
+
 # Expose the production port
 EXPOSE 4800
 
 # Run the application
 CMD ["npm", "run", "start"]
+
 
 
 
