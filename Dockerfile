@@ -1,7 +1,7 @@
 FROM node:18.15-alpine
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /src
 
 # Copy only package.json and package-lock.json for dependency installation
 COPY package*.json ./
