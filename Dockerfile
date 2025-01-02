@@ -3,22 +3,23 @@ FROM node:18.15-alpine
 # Set the working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
+# Copy only package.json and package-lock.json for dependency installation
 COPY package*.json ./
 
-# Install dependencies  # && npm audit fix
-RUN npm install  
+# Install dependencies
+RUN npm install --production
 
-# Copy the rest of the application code
+# Copy the rest of the application
 COPY . .
 
 # Build the application
 RUN npm run build
 
-EXPOSE 3001
+# Expose the production port
+EXPOSE 4800
 
+# Run the application
 CMD ["npm", "run", "start"]
-
 
 
 
