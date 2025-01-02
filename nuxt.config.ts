@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-
   content: {
     highlight: {
       preload: ['py'],
@@ -28,11 +27,6 @@ export default defineNuxtConfig({
       // baseURL: '/docs/',
       // buildAssetsDir: "/_nuxt/",
     },
-
   },
-
-
-
-
   // Have tried all different setups in nginx to make it work but issue is that file imports within files does not get the baseUrl added. Accessible correctly on localhost:{$PORT} if not adding baseURL
 })
