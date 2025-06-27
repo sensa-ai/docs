@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   content: {
     highlight: {
-      preload: ['py'],
+      preload: ['java', 'python', 'bash', 'javascript', 'go', 'cs'] // preload needed languages
     }
   },
   // https://github.com/nuxt-themes/docus
